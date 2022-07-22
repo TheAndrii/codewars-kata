@@ -75,3 +75,23 @@ const twiceAsOld = (dadYearsOld, sonYearsOld) => Math.abs(dadYearsOld - 2 * sonY
 
 //https://www.codewars.com/kata/5933a1f8552bc2750a0000ed/train/javascript
 const nthEven = n => (n - 1) * 2;
+
+//https://www.codewars.com/kata/574b3b1599d8f897470018f6/train/javascript
+function getRealFloor(n) {
+  if (n >= 1 && n <= 12) {
+    return n - 1;
+  } else if (n > 12) {
+      return n - 2;
+  }
+  return n;
+}
+
+//https://www.codewars.com/kata/55f9bca8ecaa9eac7100004a/train/javascript
+function past(h, m, s){
+  return h * 3600000 + m * 60000 + s * 1000;
+}
+
+//https://www.codewars.com/kata/5545f109004975ea66000086/train/javascript
+function isDivisible(n, x, y) {
+  return n % x === 0 && n % y === 0;
+}
