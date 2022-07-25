@@ -127,3 +127,36 @@ function giveMeFive(obj){
   }
   return five;
 }
+
+//https://www.codewars.com/kata/understanding-closures-the-basics/train/javascript
+function buildFun(n) {
+  const res = [];
+  for (let i = 0; i < n; i++) res.push(() => i);
+  return res;
+}
+
+//https://www.codewars.com/kata/56f935002e6c0d55fa000d92/train/javascript
+class Shark extends Animal {
+  constructor(name, age, status) {
+    super(name, age, 0, 'shark', status);
+  }
+}
+
+class Cat extends Animal {
+  constructor(name, age, status) {
+    super(name, age, 4, 'cat', status);
+  }
+  introduce() {
+    return `${super.introduce()}  Meow meow!`;
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, age, status, master) {
+    super(name, age, 4, 'dog', status);
+    this.master = master;
+  }
+  greetMaster() {
+    return `Hello ${this.master}`;
+  }
+}
